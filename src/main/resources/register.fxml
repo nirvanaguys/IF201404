@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane styleClass="auth-container" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.app.RegisterController">
+   <children>
+      <!-- Main auth Structure -->
+      <VBox alignment="CENTER" spacing="0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+
+            <!-- auth Content -->
+            <VBox styleClass="auth-content" VBox.vgrow="ALWAYS">
+
+               <children>
+                  <!-- Registration Form Card -->
+                  <VBox alignment="CENTER" spacing="20.0" styleClass="auth-glass-panel" maxWidth="400" minWidth="400">
+                     <children>
+                        <Label text="✨ EDULIFE+" styleClass="auth-title" />
+                        <Label text="Daftarkan akun anda!" styleClass="auth-subtitle" />
+                        <!-- Input Section -->
+                        <VBox spacing="20.0" alignment="CENTER" prefWidth="400">
+                           <children>
+                              <VBox spacing="8" alignment="CENTER_LEFT" prefWidth="400">
+                                 <children>
+                                    <Label text="👤 Username" style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 15px;" />
+                                    <TextField fx:id="usernameField" promptText="Pilih username unik Anda" styleClass="glass-input" prefWidth="400" prefHeight="45" />
+                                 </children>
+                              </VBox>
+                              <VBox spacing="8" alignment="CENTER_LEFT" prefWidth="400">
+                                 <children>
+                                    <Label text="🔐 Password" style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 15px;" />
+                                    <PasswordField fx:id="passwordField" promptText="Buat password yang kuat" styleClass="glass-input" prefWidth="400" prefHeight="45" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+
+                        <!-- Action Buttons -->
+                        <VBox spacing="15" alignment="CENTER" prefWidth="400">
+                           <children>
+                              <Button onAction="#handleRegister" styleClass="login-button" text="✨ Buat Akun Sekarang" prefWidth="400" prefHeight="50" />
+                              <Button onAction="#goToLogin" styleClass="login-button" text="← Kembali ke Login" prefWidth="400" prefHeight="45" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
